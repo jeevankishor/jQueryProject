@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Assignment</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/styleit.css">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<style>
+#sortable1, #sortable2 {
+	border: 1px solid #eee;
+	width: 32%;
+	list-style-type: none;
+	margin: 2px;
+	padding: 5px 0 0 0;
+	float: left;
+	margin-right: 10px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+#sortable3 {
+	border: 1px solid #eee;
+	width: 30%;
+	list-style-type: none;
+	margin: 2px;
+	padding: 5px 0 0 0;
+	float: left;
+	margin-right: 10px;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+#sortable1 li, #sortable2 li, #sortable3 li {
+	margin: 0 5px 5px 5px;
+	padding: 5px;
+	font-size: 20px;
+	width: 120px;
+}
+</style>
+<script>
+	$(function() {
+		$("#sortable1, #sortable2, #sortable3").sortable({
+			connectWith : ".connectedSortable"
+		}).disableSelection();
+	});
+</script>
+</head>
+<body>
+
+	<ul id="sortable1" class="connectedSortable">
+		<li class="ui-state-default">Item 1</li>
+		<li class="ui-state-default">Item 2</li>
+		<li class="ui-state-default">Item 3</li>
+		<li class="ui-state-default">Item 4</li>
+		<li class="ui-state-default">Item 5</li>
+	</ul>
+
+	<ul id="sortable2" class="connectedSortable">
+		<li class="ui-state-highlight">Item 1</li>
+		<li class="ui-state-highlight">Item 2</li>
+		<li class="ui-state-highlight">Item 3</li>
+		<li class="ui-state-highlight">Item 4</li>
+		<li class="ui-state-highlight">Item 5</li>
+	</ul>
+
+	<ul id="sortable3" class="connectedSortable">
+		<li class="ui-state-highlight">Item 1</li>
+		<li class="ui-state-highlight">Item 2</li>
+		<li class="ui-state-highlight">Item 3</li>
+		<li class="ui-state-highlight">Item 4</li>
+		<li class="ui-state-highlight">Item 5</li>
+		<li class="ui-state-highlight">Item 6</li>
+		<li class="ui-state-highlight">Item 7</li>
+		<li class="ui-state-highlight">Item 8</li>
+		<li class="ui-state-highlight">Item 9</li>
+		<li class="ui-state-highlight">Item 10</li>
+		<li class="ui-state-highlight">Item 11</li>
+		<li class="ui-state-highlight">Item 12</li>
+		<li class="ui-state-highlight">Item 13</li>
+		<li class="ui-state-highlight">Item 14</li>
+		<li class="ui-state-highlight">Item 15</li>
+	</ul>
+
+</body>
+</html>
